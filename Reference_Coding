@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void get_number(int& input1, int& input2);
+void swap_value(int& variable1, int& variable2);
+void order(int& n1, int& n2);
+void show_result(int output1, int output2);
+int main() {
+    int first_num = 0, second_num = 0;
+    get_number(first_num, second_num);
+    swap_value(first_num, second_num);
+    cout<<"In reverse orders are: ";
+    show_result(first_num, second_num);
+    order(first_num, second_num);
+    cout<<"In increasing order the numbers are: ";
+    show_result(first_num, second_num);
+    
+    return 0;
+}
+void get_number(int& input1, int& input2){
+    cout<<"Enter two integer number: ";
+    cin>>input1
+    >>input2;
+}
+void swap_value(int& variable1, int& variable2){
+    int temp;
+    temp = variable1;
+    variable1 = variable2;
+    variable2 = temp;
+}
+void order(int& n1, int& n2){
+    if(n1 > n2){
+        swap_value(n1, n2);
+    }
+}
+void show_result(int output1, int output2){
+    cout<<output1<<" "<<output2<<endl;
+}
